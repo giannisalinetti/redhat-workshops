@@ -1,14 +1,14 @@
 # JBoss EAP Operator Demo
 
 This demo demonstrates how to use the new JBoss EAP Operator, based on the 
-community (Wildfly Operator)[https://github.com/wildfly/wildfly-operator].
+community [Wildfly Operator](https://github.com/wildfly/wildfly-operator).
 
 ## Steps
 1. Create the template in your project. The template contains only configurations
    related to BuildConfigs and ImageStreams for the artifacts build and the
    final image build.
    ```
-   $ oc apply -f eap73-build-template.yaml
+   $ oc apply -f eap73-build-s2i.yaml
    ```
 2. Process the template using default values and pipe to the oc CLI to create 
    objects and automatically start the build. The example will build and deploy
