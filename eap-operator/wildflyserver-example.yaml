@@ -1,0 +1,18 @@
+apiVersion: wildfly.org/v1alpha1
+kind: WildFlyServer
+metadata:
+  name: example
+  namespace: eap-operator-demo
+spec:
+  applicationImage: eap-app:latest
+  replicas: 1
+  storage:
+    volumeClaimTemplate:
+      spec:
+        # Uncomment this line if you have installed OCS and you want to
+        # use the ceph-rbd storageclass.
+        #storageClassName: ocs-storagecluster-ceph-rbd
+        resources:
+          requests:
+            storage: 3Gi
+
