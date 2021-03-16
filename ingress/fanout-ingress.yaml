@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fanout-ingress
+spec:
+  rules:
+  - host: "fanout.apps.ocp4.rhocplab.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/foo"
+        backend:
+          service:
+            name: foo
+            port:
+              number: 8080
+  - host: "fanout.apps.ocp4.rhocplab.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/bar"
+        backend:
+          service:
+            name: bar
+            port:
+              number: 8080
+
