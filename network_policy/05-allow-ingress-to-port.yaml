@@ -13,3 +13,4 @@ spec:
     - podSelector:
         matchLabels:
           role: monitoring
+

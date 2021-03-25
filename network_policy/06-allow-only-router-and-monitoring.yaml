@@ -20,3 +20,4 @@ spec:
       namespaceSelector:
         matchLabels:
           name: openshift-monitoring
+
